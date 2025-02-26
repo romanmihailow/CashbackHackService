@@ -25,6 +25,27 @@ public class CashbackHackServiceTest {
         Assert.assertEquals(900, result);
     }
 
+    @org.junit.jupiter.api.Test
+    public void testCashbackHackServiceJupiterApi() {
+        CashbackHackService service = new CashbackHackService();
+        int result = service.remain(900);
+        Assert.assertEquals(100, result);
+    }
+    @org.junit.jupiter.api.Test
+    public void testCashbackHackService1000JupiterApi() {
+        CashbackHackService service = new CashbackHackService();
+        int result = service.remain(1000);
+        Assert.assertEquals(0, result);
+    }
+    @org.junit.jupiter.api.Test
+    public void testCashbackHackService1100JupiterApi() {
+        CashbackHackService service = new CashbackHackService();
+        int result = service.remain(1100);
+        Assert.assertEquals(900, result);
+    }
+
+
+
 
 }
 
